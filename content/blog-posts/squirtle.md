@@ -5,3 +5,6 @@ category: Tiny Turtle
 height: 1' 08"
 weight: 19.8lbs
 ---
+<p>Where oh where is that pony?</p>
+<!-- endexcerpt -->
+<p>Is he in the stable or down by the stream?</p>

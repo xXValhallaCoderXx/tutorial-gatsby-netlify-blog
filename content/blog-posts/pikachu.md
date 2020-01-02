@@ -5,3 +5,6 @@ category: Mouse
 height: 1' 04"
 weight: 13.2lbs
 ---
+<p>Where oh where is that pony?</p>
+<!-- endexcerpt -->
+<p>Is he in the stable or down by the stream?</p>
