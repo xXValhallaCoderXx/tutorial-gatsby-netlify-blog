@@ -5,6 +5,4 @@ category: Seed
 height: 2' 04"
 weight: 15.2lbs
 ---
-<p>Where oh where is that pony?</p>
-<!-- endexcerpt -->
-<p>Is he in the stable or down by the stream?</p>
+# Bulbasaur is a pokemon, he is a grass type!
