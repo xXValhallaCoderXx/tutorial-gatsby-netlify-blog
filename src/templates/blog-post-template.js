@@ -40,6 +40,13 @@ export const PokemonTemplateQuery = graphql`
         intro
         title
         weight
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       html
     }

@@ -44,6 +44,13 @@ export const IndexQuery = graphql`
           frontmatter {
             title
             intro
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug
