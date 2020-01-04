@@ -4,6 +4,7 @@ intro: Squirtle's shell is not merely used for protection. The shell's rounded s
 category: Tiny Turtle
 height: 1' 08"
 weight: 19.8lbs
+featuredImage: ../../src/images/squirtle.png
 ---
 ## Description
 Squirtle is a small Pokémon that resembles a light blue turtle. While it typically walks on its two short legs, it has been shown to run on all fours in Super Smash Bros. Brawl. It has large, purplish or reddish eyes and a slightly hooked upper lip. Each of its hands and feet have three pointed digits. The end of its long tail curls inward. Its body is encased by a tough shell that forms and hardens after birth. This shell is brown on the top, pale yellow on the bottom, and has a thick white ridge between the two halves.

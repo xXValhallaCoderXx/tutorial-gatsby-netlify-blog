@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "components/layout"
 import SEO from "components/seo"
 
-const styles = {fontWeight: 800}
+const styles = { fontWeight: 800 }
 
 const PokemonTemplate = ({ data }) => {
   const {
@@ -12,18 +13,26 @@ const PokemonTemplate = ({ data }) => {
     intro,
     title,
     weight,
+    featuredImage,
   } = data.markdownRemark.frontmatter
   const { html } = data.markdownRemark
   return (
     <Layout>
       <SEO title={`Pokemon - ${title}`} />
       <h2>Pokemon: {title}</h2>
+      <Img fixed={featuredImage.childImageSharp.fixed} />
       <p>{intro}</p>
       <h4>Stats</h4>
       <ul>
-        <li><span style={styles}>Height:</span> {height}</li>
-        <li><span style={styles}>Weight:</span> {weight}</li>
-        <li><span style={styles}>Category:</span> {category}</li>
+        <li>
+          <span style={styles}>Height:</span> {height}
+        </li>
+        <li>
+          <span style={styles}>Weight:</span> {weight}
+        </li>
+        <li>
+          <span style={styles}>Category:</span> {category}
+        </li>
       </ul>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
@@ -42,8 +51,8 @@ export const PokemonTemplateQuery = graphql`
         weight
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 200) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -51,4 +60,4 @@ export const PokemonTemplateQuery = graphql`
       html
     }
   }
-`;
+`

@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, navigate } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "components/layout"
 import SEO from "components/seo"
 
@@ -22,12 +23,13 @@ const IndexPage = ({ data }) => {
   function renderBlogs(posts) {
     return posts.map(item => {
       const { slug } = item.node.fields
-      const { title, intro } = item.node.frontmatter
+      const { title, intro, featuredImage } = item.node.frontmatter
       return (
         <div style={styles} onClick={() => navigate(`/blog/${slug}`)}>
           <div style={{ color: "black" }}>
             <h4>{title}</h4>
             <p>{intro}</p>
+            <Img fixed={featuredImage.childImageSharp.fixed} />
           </div>
         </div>
       )
@@ -46,8 +48,8 @@ export const IndexQuery = graphql`
             intro
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 200) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
