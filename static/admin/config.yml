@@ -7,10 +7,14 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: content/blog-posts
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: featuredImage, label: Featured Image, widget: image }
+      - { name: date, label: Date, widget: datetime }
+      - { name: intro, label: Intro, widget: string }
+      - { name: category, label: Category, widget: string }
+      - { name: height, label: Height, widget: string }
+      - { name: weight, label: Weight, widget: string }
       - { name: body, label: Body, widget: markdown }
