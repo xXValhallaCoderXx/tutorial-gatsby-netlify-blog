@@ -23,13 +23,12 @@ const IndexPage = ({ data }) => {
   function renderBlogs(posts) {
     return posts.map(item => {
       const { slug } = item.node.fields
-      const { title, intro, featuredImage } = item.node.frontmatter
+      const { title, intro } = item.node.frontmatter
       return (
         <div style={styles} onClick={() => navigate(`/blog/${slug}`)}>
           <div style={{ color: "black" }}>
             <h4>{title}</h4>
             <p>{intro}</p>
-            <Img fixed={featuredImage.childImageSharp.fixed} />
           </div>
         </div>
       )
