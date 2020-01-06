@@ -1,7 +1,7 @@
-Copystatic/admin/config.yml: copy code to clipboard
 backend:
   name: github
   repo: xXValhallaCoderXx/tutorial-gatsby-netlify-blog
+  branch: test/netlify-cms-setup
 media_folder: static/assets
 public_folder: assets
 collections:
