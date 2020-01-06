@@ -12,13 +12,15 @@ const PokemonTemplate = ({ data }) => {
     height,
     intro,
     title,
-    weight
+    weight,
+    featuredImage
   } = data.markdownRemark.frontmatter
   const { html } = data.markdownRemark
   return (
     <Layout>
       <SEO title={`Pokemon - ${title}`} />
       <h2>Pokemon: {title}</h2>
+      <Img fixed={featuredImage.childImageSharp.fixed} />
       <p>{intro}</p>
       <h4>Stats</h4>
       <ul>
@@ -47,6 +49,13 @@ export const PokemonTemplateQuery = graphql`
         intro
         title
         weight
+        featuredImage {
+          childImageSharp {
+            fixed(width: 200) {
+            ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
       html
     }

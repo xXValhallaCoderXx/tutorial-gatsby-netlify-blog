@@ -1,4 +1,5 @@
-const { createFilePath } = require("gatsby-source-filesystem")
+const { createFilePath } = require("gatsby-source-filesystem");
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 const path = require("path")
 
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -10,6 +11,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
+  fmImagesToRelative(node);
   let parentNode = getNode(node.parent)
   if (node.internal.type === "MarkdownRemark") {
     if (parentNode.sourceInstanceName === "blogs") {

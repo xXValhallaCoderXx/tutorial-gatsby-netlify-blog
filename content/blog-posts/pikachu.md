@@ -1,5 +1,7 @@
 ---
 title: Pikachu
+featuredImage: /images/bulbasaur.png
+date: 2020-01-06T17:38:26.550Z
 intro: Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge. 
 category: Mouse
 height: 1' 04"
