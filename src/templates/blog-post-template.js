@@ -12,15 +12,13 @@ const PokemonTemplate = ({ data }) => {
     height,
     intro,
     title,
-    weight,
-    featuredImage,
+    weight
   } = data.markdownRemark.frontmatter
   const { html } = data.markdownRemark
   return (
     <Layout>
       <SEO title={`Pokemon - ${title}`} />
       <h2>Pokemon: {title}</h2>
-      <Img fixed={featuredImage.childImageSharp.fixed} />
       <p>{intro}</p>
       <h4>Stats</h4>
       <ul>
